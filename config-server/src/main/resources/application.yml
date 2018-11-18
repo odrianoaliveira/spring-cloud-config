@@ -6,7 +6,7 @@ spring:
     config:
       server:
         git:
-          uri: ssh://localhost/config-repo
+          uri: https://github.com/odrianoaliveira/spring-cloud-config
           clone-on-start: true
 security:
     user:
