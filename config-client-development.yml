@@ -6,4 +6,4 @@ spring:
     password: guest
 
 user:
-  role: Programmer
+  role: Software Engineer
