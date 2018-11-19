@@ -2,12 +2,18 @@ server:
   port: 8888
 
 spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   cloud:
     config:
       server:
         git:
           uri: https://github.com/odrianoaliveira/spring-cloud-config
           clone-on-start: true
+
 security:
     user:
       name: root
