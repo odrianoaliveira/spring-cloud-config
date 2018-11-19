@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: air-config-server
+    name: config-server
   cloud:
     config:
       server:
@@ -20,5 +20,3 @@ security:
   user:
     name: root
     password: s3cr3t
-
-#management.endpoints.web.exposure.include: bus-refresh, bus-env

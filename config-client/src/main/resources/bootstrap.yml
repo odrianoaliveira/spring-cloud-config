@@ -9,6 +9,9 @@ spring:
       uri: http://localhost:8888
       username: root
       password: s3cr3t
+  bus:
+    trace:
+      enabled: true
 
 # By default, all sensitive endpoints added by actuator are secured. This includes ‘/refresh’ endpoint.
 management.endpoints.web.exposure.include: "refresh"
