@@ -1,9 +1,8 @@
 spring:
   application:
-    name: config-client
+    name: air-config-client
   profiles:
-    active:
-      development
+    active: development
   cloud:
     config:
       uri: http://localhost:8888
