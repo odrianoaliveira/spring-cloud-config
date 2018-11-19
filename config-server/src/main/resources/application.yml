@@ -2,19 +2,23 @@ server:
   port: 8888
 
 spring:
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+  application:
+    name: air-config-server
   cloud:
     config:
       server:
         git:
           uri: https://github.com/odrianoaliveira/spring-cloud-config
           clone-on-start: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 security:
-    user:
-      name: root
-      password: s3cr3t
+  user:
+    name: root
+    password: s3cr3t
+
+#management.endpoints.web.exposure.include: bus-refresh, bus-env
