@@ -10,7 +10,7 @@ spring:
         git:
           uri: https://github.com/odrianoaliveira/spring-cloud-config
           clone-on-start: true
-          searchPaths: '{application}'
+          force-pull: true
   rabbitmq:
     host: localhost
     port: 5672
