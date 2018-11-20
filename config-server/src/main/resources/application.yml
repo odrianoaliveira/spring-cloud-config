@@ -1,23 +1,29 @@
 server:
+  # using the 8888 port for our spring config server
   port: 8888
 
 spring:
   application:
+    # this will be used in the searchPaths as the {application} placeholder
     name: air-config-server
   cloud:
     config:
       server:
         git:
+          # this is the github configurarion repository
           uri: https://github.com/odrianoaliveira/spring-cloud-config
+          # to organize our config repo using folders, like 'air-config-server/dev/application.yml'
           searchPaths: '{application}/{profile}'
           clone-on-start: true
           force-pull: true
+  #setting up the rabbitMQ AMQP connector
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
     password: guest
 
+# is a good practice to use spring security
 security:
   user:
     name: root
